@@ -1,0 +1,3 @@
+This project uses maven to import netty version 4.1.43.Final which is affected by three vulnerabilities, CVE-2019-20444, CVE-2019-20445 and CVE-2020-11612. The first two are related to the webserver component, and the last one to decompression.
+However, this particular project only makes use of the compression part of netty, and so we are unaffected by any vulnerabilities in the webserver component.
+Normally we would seem to be affected by all vulnerabilities, but thanks to our Vulnerable Functionality analysis we know we are actually only affected by CVE-2020-11612, allowing us to safely ignore CVE-2019-20444 and CVE-2019-20445.
