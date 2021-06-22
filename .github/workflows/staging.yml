@@ -11,6 +11,6 @@ jobs:
     - uses: debricked/vulnerable-functionality/java/maven@v0.8
     - uses: debricked/actions/scan@v1
       env:
-        DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
+        DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_STAGING_TOKEN }}
         UPLOAD_ALL_FILES: "true"
         DEBRICKED_API_URI: ${{ secrets.DEBRICKED_STAGING_URI }}
