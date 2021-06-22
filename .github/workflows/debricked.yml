@@ -12,3 +12,4 @@ jobs:
     - uses: debricked/actions/scan@v1
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
+	UPLOAD_ALL_FILES: "true"
