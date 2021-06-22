@@ -13,4 +13,4 @@ jobs:
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
         UPLOAD_ALL_FILES: "true"
-        URI: ${{ secrets.DEBRICKED_STAGING_URI }}
+        DEBRICKED_API_URI: ${{ secrets.DEBRICKED_STAGING_URI }}
