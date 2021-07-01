@@ -8,14 +8,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: find / -name .debricked-call-graph
-    - run: find / -name pom.xml
+    - run: pwd
+    - run: find . -name .debricked-call-graph
+    - run: find . -name pom.xml
     - uses: debricked/vulnerable-functionality/java/maven@v0.8
-    - run: find / -name .debricked-call-graph
-    - run: find / -name pom.xml
+    - run: pwd
+    - run: find . -name .debricked-call-graph
+    - run: find . -name pom.xml
     - uses: debricked/actions/scan@v1
-    - run: find / -name .debricked-call-graph
-    - run: find / -name pom.xml
+    - run: pwd
+    - run: find . -name .debricked-call-graph
+    - run: find . -name pom.xml
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
         UPLOAD_ALL_FILES: "true"
