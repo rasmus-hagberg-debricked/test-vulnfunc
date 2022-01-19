@@ -1,4 +1,4 @@
-name: Debricked staging vulnerable functionality and scan
+name: Debricked vulnerable functionality and scan
 
 on: [push, pull_request]
 
