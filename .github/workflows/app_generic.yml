@@ -12,7 +12,7 @@ jobs:
       with:
         java-version: '11'
     - run: mvn -B package dependency:copy-dependencies -DoutputDirectory=dependencies -DskipTests
-    - uses: debricked/vulnerable-functionality/java@v0.1.1-test
+    - uses: debricked/vulnerable-functionality/java@v0.2.1-test
       with:
         path-to-compiled-files: 'target/classes'
         path-to-library-files: 'dependencies'
