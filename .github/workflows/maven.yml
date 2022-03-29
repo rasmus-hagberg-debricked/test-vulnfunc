@@ -1,4 +1,4 @@
-name: Staging generic vulnfunc+scan
+name: App maven vulnfunc+scan
 
 on: [push, pull_request]
 
