@@ -12,7 +12,7 @@ jobs:
       with:
         java-version: '11'
     - run: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
-    - uses: debricked/vulnerable-functionality/maven@master
+    - uses: debricked/vulnerable-functionality/java/maven@master
     - uses: debricked/actions/scan@v1
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
