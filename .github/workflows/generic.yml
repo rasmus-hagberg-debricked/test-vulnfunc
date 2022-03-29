@@ -19,5 +19,5 @@ jobs:
         path-to-library-files: 'dependencies'
     - uses: debricked/actions/scan@v1
       env:
-        DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_STAGING_TOKEN }}
+        DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_STAGING_TOKEN_TESTKONTO }}
         DEBRICKED_API_URI: ${{ secrets.DEBRICKED_STAGING_URI }}
