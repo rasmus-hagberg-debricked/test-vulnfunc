@@ -1,4 +1,4 @@
-name: Debricked staging vulnerable functionality and scan
+name: Staging generic vulnfunc+scan
 
 on: [push, pull_request]
 
@@ -11,13 +11,13 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '11'
+    - run: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
     - run: mvn -B package dependency:copy-dependencies -DoutputDirectory=dependencies -DskipTests
-    - uses: debricked/vulnerable-functionality/java@v0-test
+    - uses: debricked/vulnerable-functionality/java@master
       with:
         path-to-compiled-files: 'target/classes'
         path-to-library-files: 'dependencies'
     - uses: debricked/actions/scan@v1
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_STAGING_TOKEN }}
-        UPLOAD_ALL_FILES: "true"
         DEBRICKED_API_URI: ${{ secrets.DEBRICKED_STAGING_URI }}
